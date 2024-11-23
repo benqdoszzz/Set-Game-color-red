@@ -1,0 +1,12 @@
+local function Red(find)
+	for i,v in pairs(find:GetChildren()) do
+		if v:IsA("BasePart") then
+			v.Color = Color3.fromRGB(255, 0, 0)
+			Red(v)
+		else
+			Red(v)
+		end
+	end
+end
+
+Red(workspace)
